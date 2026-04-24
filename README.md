@@ -5,7 +5,7 @@
 <div align="center">
   <h1>🧊 hard-compact</h1>
   <p><strong>Stop your CLI agent from lobotomizing itself between context windows.</strong></p>
-  <p>Drop-in custom compact prompts that preserve operational state — not narrative prose.</p>
+  <p>Drop-in custom compact prompts: <strong>better state preservation + 15–30 % of original token size.</strong></p>
   <p>
     <a href="#claude-code"><img src="https://img.shields.io/badge/Claude_Code-settings.json-8B4789?style=flat-square" alt="Claude Code" /></a>
     <a href="#codex-cli"><img src="https://img.shields.io/badge/Codex_CLI-config.toml-000?style=flat-square" alt="Codex CLI" /></a>
@@ -13,6 +13,16 @@
     <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
   </p>
 </div>
+
+---
+
+## What you get
+
+- **Better state preservation** — open bugs, failed commands, active hypotheses, reasoning thread survive compaction intact.
+- **15–30 % of original token size** — the compact itself is telegraphic (raisin-style), not prose. Same facts, ~70–85 % fewer tokens.
+- **5× more compaction cycles** — smaller footprint per cycle means the context budget lasts far longer. Critical for 1 M-token models running long autonomous sessions.
+- **Drop-in, one config key** — `compactSummaryPrompt` in Claude Code `settings.json`, `compact_prompt` in Codex CLI `config.toml`. No code, no deps.
+- **Works with PreCompact hooks** — combine with a shell hook that injects live system state (task list, git log) for the compactor to include.
 
 ---
 
