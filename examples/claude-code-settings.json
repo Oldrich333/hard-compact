@@ -1,0 +1,3 @@
+{
+  "compactSummaryPrompt": "STYLE: telegraphic key=value, not prose. FORBIDDEN: narrative sentences, 'this session we...', self-reported completeness, repeating facts. IMMORTAL (never compress): open bugs with file:line refs, pending decisions with rationale, failed commands with error, active hypotheses. COMPRESS AGGRESSIVELY: completed tasks (→ file path + 1 line), resolved bugs, historical background. PRIORITIZE: sections 7-9 (pending/current/next) OVER sections 1-6 (history). ADD at end: OPEN_HYPOTHESES — unverified assumptions that could be false negatives. ADD: TRAJECTORY — 1 sentence reasoning thread from this session."
+}

@@ -1,0 +1,21 @@
+# Add to ~/.codex/config.toml
+
+compact_prompt = """
+Compact the Codex session history into a continuation brief for the next turn.
+
+Preserve:
+- the user's current goal and the newest instruction;
+- active plan state, blockers, and the next concrete action;
+- files changed or inspected, exact paths, config keys, command names, model/backend choices, and important IDs;
+- commands already run and their pass/fail result;
+- unresolved bugs, risks, TODOs, and assumptions;
+- dirty-worktree constraints and any user changes that must not be reverted;
+- any structured state blocks present in the session (SESSION_COMPACT, etc.) — preserve their schema and meaning, do not rewrite into prose.
+
+Separate verified facts from hypotheses. Keep dates/times concrete when present.
+Do not preserve long logs, repeated grep output, dead exploration branches,
+conversation filler, or generic reasoning narration.
+
+Output a concise but complete operational handoff that lets Codex continue work
+without re-reading the whole prior transcript.
+"""
